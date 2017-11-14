@@ -1,0 +1,7 @@
+   {/* <Route path="/Home" exact component={App} />
+              <Route path="/:studentId" component={Information} />  
+               <Route path="/about" render={ () => {
+                return <Information articles={this.props.articles} />
+              }} />            
+              {/* <Route path={'/:studentId'}  render={(props)=> <Information articles={this.props.articles} {...props} /> }/>      */}
+              {/* <Route path={'/daniele'}  render={(props)=> <Information articles={this.props.articles} {...props} /> }/>            */} */}

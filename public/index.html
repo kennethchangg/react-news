@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+    <title>Online fashion news</title>
+    <style>
+      /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+      .navbar {
+        margin-bottom: 50px;
+        border-radius: 0;
+
+      }
+      
+      /* Remove the jumbotron's default bottom margin */ 
+       .jumbotron {
+        margin-bottom: 0;
+      }
+     
+      /* Add a gray background color and some padding to the footer */
+      footer {
+        background-color: black;
+      
+        padding: 25px;
+      }
+        #animation { 
+            background-image: url(http://jumpingfishes.com/dancingpurpleunicorns/charging.png);
+            background-repeat: no-repeat; 
+            height: 102px; 
+            width: 140px; 
+        }
+    </style>
+
+        <script>
+        onload = function startAnimation() { 
+          var frameHeight = 102; 
+          var frames = 15; 
+          var frame = 0; 
+          var div = document.getElementById("animation"); 
+          setInterval(function () { 
+              var frameOffset = (++frame % frames) * -frameHeight; 
+              div.style.backgroundPosition = "0px " + frameOffset + "px"; 
+          }, 100); 
+        } 
+        </script>
+  
+
+
+  </head> 
+
+
+  <body>
+      <div class="banner">
+          <div class="container text-center" >
+             
+           <h1>Online News</h1>  
+            <p >Mission, Vission & Values</p>
+          </div>
+        </div>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+   
+    <div id="root"></div>
+
+
+
+      <footer class="container-fluid text-center footer">
+        <p >Online News Copyright </p>  
+        
+        <iframe class="iframe" src="http://www.facebook.com/plugins/like.php?href=http://www.devmedia.com.br&layout=button_count&
+        show_faces=true&width=380&action=like&colorscheme=light&height=30&locale=pt_BR" scrolling="no" frameborder="0" 
+        style="border:none; overflow:hidden; width:100px; height:25px;" allowTransparency="true">
+        </iframe>
+        
+      </footer>
+  </body>
+ 
+</html>

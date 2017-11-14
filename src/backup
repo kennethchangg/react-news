@@ -1,0 +1,111 @@
+import React, { Component } from 'react';
+import axios from 'axios'
+import './App.css';
+import Banner from './Banner/Banner';
+import Carousel from './Carousel/Carousel';
+import News from './News/News'
+
+class App extends Component {
+
+  constructor() {
+
+    super()
+
+    
+    this.state = {
+
+      newsUrls: [],
+
+      title: [],
+      author:[],
+      time: [],
+      image: [],
+      description: [],
+      data: []
+      
+    }
+  }
+
+  
+newsUrls = (url) =>{    //get data and store it in a empty array
+
+let promise = axios.get(url);
+
+
+  promise.then((response)=>{
+
+    // let url =[]
+    // let title =[]
+    // let author =[]
+    // let time =[]
+    // let image =[]
+    // let description=[]
+    // let data= []
+    var json = response.articles[0];
+    
+
+   // console.log(title);
+
+      // for(let i =0; i< response.data.articles.length; i++) {
+          //for(let i =0; i< response.data.articles.length; i++) {
+        
+        // data.push(response.data.articles[i])
+              // data.push(response.data.articles[i].author)
+              // data.push(response.data.articles[i].title)
+              // data.push(response.data.articles[i].description)
+              // data.push(response.data.articles[i].url)
+              // data.push(response.data.articles[i].urlToImage)
+              // data.push(response.data.articles[i].publishedAt)
+             
+
+              
+
+      //}
+
+      this.setState({
+
+        // author: author,
+        // title: title,
+      
+        // time: time,
+        // image: image,
+        // description: description,
+        // data: data
+        json: json
+
+
+      }, ()=> {
+        // console.log(this.state.title)
+        // console.log(this.state.time)
+        // console.log(this.state.author)
+        console.log(json)
+      })
+
+  })
+
+}
+
+componentWillMount() {
+  this.newsUrls('https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=9a2eb8590f2849d588eec49eae8f841a')
+}
+
+
+  render() {
+  
+
+    return (
+      <div className="App.css">
+        <header className="">
+              
+        </header>
+          <Banner/>
+          <Carousel />
+          <News  data={this.state.data}/>
+
+       
+      </div>
+    );
+  }
+}
+
+export default App;

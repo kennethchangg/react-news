@@ -1,0 +1,91 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+@media all and (min-width: 960px) {
+  body{
+      font-size: 18px;
+      font-family: Courier New;
+  }
+}
+
+@media all and (max-width: 959px) and (min-width: 600px) {
+  body{
+      font-size: 16px;
+      font-family: Courier New;
+  }
+}
+
+@media all and (max-width: 599px) and (min-width: 320px) {
+  body{
+      font-size: 12px;
+      font-family: Courier New;
+  }
+
+}
+
+.banner{
+  background-color: white;
+  min-height: 50%;
+  padding-bottom: 5%;
+  padding-top: 6%;
+  text-align: center;
+
+}
+
+.articleImg { /* do not change */
+  max-width: 50%;
+  height: auto;
+  margin-left: 20%;
+  padding-top: 2%;
+  padding-bottom: 4%;
+}
+
+
+.news{
+
+  margin-top: 3%;
+
+}
+
+.footer{
+  margin-top: 3%;
+  background-color: rgb(213, 216, 209);
+}
+.iframe{
+ 
+  margin-left: 0%;
+}
+
